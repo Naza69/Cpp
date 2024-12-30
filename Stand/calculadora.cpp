@@ -63,8 +63,13 @@ int main() {
 		}
 	
 	}
-		cout << "Quiere hacer otra operacion? (0 para si, otro numero para no)" << endl;
+		cout << "Quiere hacer otra operacion? (0 para si, 1 para no)" << endl;
 		cin >> out;
+		while(out != 1 && out != 0){
+			cout << "ERROR: entrada solo para 1 o 0, vuelva a intentarlo" << endl;	
+			cin >> out;	
+		}
+
 	}
 		return 0;
 
