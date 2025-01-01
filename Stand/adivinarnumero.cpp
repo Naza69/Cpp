@@ -20,8 +20,7 @@ int main(){
 			continue;	
 	
 		}
-
-	
 	
 	}	
-	return 0; }
+	return 0; 
+}
