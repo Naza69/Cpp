@@ -13,26 +13,30 @@ int main(){
 		cin >> time;	
 		int counter = time;	
 		for(int a = 0; a <= time; a++){
-							
+			int v1 = rand() % 5, v2 = rand() % 5, v3 = rand() % 5; 
+			
+			int v4 = rand() % 5, v5 = rand() % 5, v6 = rand() % 5;
 
+			int v7 = rand() % 5, v8 = rand() % 5, v9 = rand() % 5;
+			
 			int matrix[3][3] = {
-				{rand() % 5, rand() % 5, rand() % 5},
-				{rand() % 5, rand() % 5, rand() % 5},
-				{rand() % 5, rand() % 5, rand() % 5}	
+				{v1, v2, v3},
+				{v4, v5, v6},
+				{v7, v8, v9}	
 			};
 			
 			for(int i = 0; i <= sizeof(matrix); i++){
+				
+				cout << "\r" << flush;	
 				for(int j = 0; j <= sizeof(matrix[i]); j++){
 					cout <<  "\r[" << matrix[i][j] << "]" << flush;	
 				
 				}
 				cout << "\r" << flush << endl;	
-		
 			};
-			usleep(200000);
-			cout << "\r" << flush;	
+			usleep(1000000);
 		}
-		cout << "Quiere volver a repetir el proceso? (1 para si, 0 para no)" << endl;
+		cout << "Quiere volver a repetir el proceso? (1 para no, 0 para si)" << endl;
 		cin >> out;
 		while(out != 1 && out != 0){
 			cout << "ERROR: Solo puede ingresar 0 o 1 (1 para salir, 0 para volver a repetir el proceso)" << endl;
