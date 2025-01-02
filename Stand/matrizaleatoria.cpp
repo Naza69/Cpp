@@ -1,15 +1,17 @@
 #include <iostream>
 #include <cstdlib>
-
+#include <ctime>
 using namespace std;
 
 int main() {
-	
+	srand(time(0));
 
 	int matriz[3][3] = {
-		{1, 2, 3},
-		{4, 5, 6},
-		{7, 8, 9}		
+		{rand() % 10, rand() % 10, rand() % 10},
+		
+		{rand() % 10, rand() % 10, rand() % 10},
+				
+		{rand() % 10, rand() % 10, rand() % 10}
 	
 	};
 
