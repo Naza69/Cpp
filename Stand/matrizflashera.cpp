@@ -25,14 +25,14 @@ int main(){
 				{v7, v8, v9}	
 			};
 			
-			for(int i = 0; i <= sizeof(matrix); i++){
-				
-				cout << "\r" << flush;	
-				for(int j = 0; j <= sizeof(matrix[i]); j++){
-					cout <<  "\r[" << matrix[i][j] << "]" << flush;	
+			for(int i = 0; i < 3; i++){
+					
+				cout << "\r" << flush;
+				for(int j = 0; j < 3; j++){
+					cout <<  "[" << matrix[i][j] << "]";	
 				
 				}
-				cout << "\r" << flush << endl;	
+				cout << "" << endl;
 			};
 			usleep(1000000);
 		}
