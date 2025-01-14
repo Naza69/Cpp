@@ -13,6 +13,7 @@ int main(){
 		cin >> time;	
 		int counter = time;	
 		for(int a = 0; a <= time; a++){
+
 			int v1 = rand() % 5, v2 = rand() % 5, v3 = rand() % 5; 
 			
 			int v4 = rand() % 5, v5 = rand() % 5, v6 = rand() % 5;
@@ -32,7 +33,7 @@ int main(){
 					cout <<  "[" << matrix[i][j] << "]";	
 				
 				}
-				cout << "" << endl;
+				cout << endl;
 			};
 			usleep(1000000);
 		}
