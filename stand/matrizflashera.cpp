@@ -18,24 +18,20 @@ int main(){
 		cout << "Eliga la cantidad de tiempo que desea ver la matriz flashera (Segundos): ";		
 		cin >> time;	
 		int counter = time;	
-		for(int a = 1; a <= 10; a++){
+		for(int a = 1; a <= 11*time; a++){
 
-			int v1 = rand() % 5, v2 = rand() % 5, v3 = rand() % 5; 
+			int matrix[5][5];
+			for(int i = 0; i < 5; i++){
+				for(int j = 0;j < 5; j++){
+					matrix[i][j] = rand() % 10;	
 			
-			int v4 = rand() % 5, v5 = rand() % 5, v6 = rand() % 5;
-
-			int v7 = rand() % 5, v8 = rand() % 5, v9 = rand() % 5;
-			
-			int matrix[3][3] = {
-				{v1, v2, v3},
-				{v4, v5, v6},	
-				{v7, v8, v9}	
-			};
+				}
+			}	
 
 			clearConsole();
 			
-			for(int i = 0; i < 3; i++){
-				for(int j = 0; j < 3; j++){
+			for(int i = 0; i < 5; i++){
+				for(int j = 0; j < 5; j++){
 					cout <<  "[" << matrix[i][j] << "]";	
 				
 				}
