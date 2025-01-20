@@ -4,6 +4,12 @@
 #include <format>
 using namespace std; 
 
+
+void clearConsole() {
+	cout << "\033[2J\033[H";
+
+}
+
 int main(){
 	int out = 0;
 	while(out != 1){
@@ -12,7 +18,7 @@ int main(){
 		cout << "Eliga la cantidad de tiempo que desea ver la matriz flashera (Segundos): ";		
 		cin >> time;	
 		int counter = time;	
-		for(int a = 0; a <= time; a++){
+		for(int a = 1; a <= 10; a++){
 
 			int v1 = rand() % 5, v2 = rand() % 5, v3 = rand() % 5; 
 			
@@ -22,21 +28,22 @@ int main(){
 			
 			int matrix[3][3] = {
 				{v1, v2, v3},
-				{v4, v5, v6},
+				{v4, v5, v6},	
 				{v7, v8, v9}	
 			};
+
+			clearConsole();
 			
 			for(int i = 0; i < 3; i++){
-					
-				cout << "\r" << flush;
 				for(int j = 0; j < 3; j++){
 					cout <<  "[" << matrix[i][j] << "]";	
 				
 				}
-				cout << endl;
+				cout << "" << endl;
 			};
-			usleep(1000000);
+			usleep(90000);
 		}
+		cout << "" << endl;
 		cout << "Quiere volver a repetir el proceso? (1 para no, 0 para si)" << endl;
 		cin >> out;
 		while(out != 1 && out != 0){
