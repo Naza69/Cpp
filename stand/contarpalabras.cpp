@@ -12,7 +12,10 @@ int main(){
 
 	for(int i = 0; i < sentence.length(); i++){
 		if(sentence[i] == ' ' && i + 1 < sentence.length() && sentence[i+1] != ' '){
-			counter++;	
+			if(sentence[i+1] != '.' && i != sentence.length()-1){
+				
+				counter++;
+			}
 		
 		}			
 
