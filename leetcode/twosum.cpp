@@ -27,8 +27,8 @@ int main() {
 	for(int i = 0; i < sizeof(numbers)/sizeof(numbers[0]); i++){	
 		for(int j = 1; j < sizeof(numbers)/sizeof(numbers[0]); j++){
 			if(numbers[i] + numbers[j] == target){
-				sums_target[i] = numbers[i];
-				sums_target[i+1] = numbers[j];
+				sums_target[i] = i ;
+				sums_target[i+1] = j;
 
 			}				
 			
@@ -36,7 +36,7 @@ int main() {
 
 	}
 
-	cout << "Los numeros del array ingresado que sumados dan el numero target son los siguientes: [ ";
+	cout << "Los indices de los numeros del array ingresado que sumados dan el numero target son los siguientes: [ ";
 	for(int i = 0; i < sizeof(sums_target)/sizeof(sums_target[0]); i++){
 		if(i != sizeof(sums_target)/sizeof(sums_target[0])-1){
 
